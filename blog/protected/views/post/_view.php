@@ -8,7 +8,7 @@
 
 	<div class="post">
 	<div class="title">
-		<?php echo CHtml::link(CHtml::encode($data->title), $data->url); ?>
+		<?php echo CHtml::link(CHtml::encode($data->title), $data->url, array()); ?>
 	</div>
 	<div class="author">
 		posted by <?php echo $data->author->username
@@ -26,7 +26,7 @@
 		<b>Category:</b>
 		<?php echo($data->category); ?>
 		<br/>
-		<?php echo CHtml::link("Comments ({$data->commentCount})",$data->getUrl().'#comments'); ?>
+		<?php echo CHtml::link("Comentários ({$data->commentCount})",$data->getUrl().'#comments'); ?>
 	</div>
 </div>
 

@@ -43,14 +43,9 @@
 		<?php //echo $form->error($model,'created_at'); ?>
 	</div> -->
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'author_id'); ?>
-		<?php echo $form->textField($model,'author_id'); ?>
-		<?php echo $form->error($model,'author_id'); ?>
-	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class'=>'btn btn-warning btn-sm')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -37,7 +37,7 @@ class PostController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin', '@'), // só os donos dos posts e adms do blog podem apagar
+				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -91,10 +91,10 @@ class PostController extends Controller
 		if(isset($_POST['Post']))
 		{
 			$model->attributes=$_POST['Post'];
+			$model->__set('author_id', Yii::app()->user->id);
 			if($model->save())
 			$this->redirect(array('view','id'=>$model->id));
 		}
-		
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -159,7 +159,7 @@ class PostController extends Controller
 		
 		$dataProvider=new CActiveDataProvider('Post', array(
 			'pagination'=>array(
-				'pageSize'=>5,
+				'pageSize'=>3,
 			),
 			'criteria'=>$criteria,
 		));

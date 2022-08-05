@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="time">
-		<?php echo date('F j, Y \a\t h:i a',$comment->created_at); ?>
+		<?php echo ($comment->created_at); ?>
 	</div>
 
 	<div class="content">

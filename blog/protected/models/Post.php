@@ -65,11 +65,11 @@ class Post extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'category' => 'Category',
-			'title' => 'Title',
-			'content' => 'Content',
-			'created_at' => 'Created At',
-			'author_id' => 'Author',
+			'category' => 'Categoria',
+			'title' => 'Titulo',
+			'content' => 'Conteúdo',
+			'created_at' => 'Criado em',
+			'author_id' => 'Autor',
 		);
 	}
 
@@ -115,18 +115,6 @@ class Post extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
-	}
-
-	protected function beforeSave()
-	{
-    if(parent::beforeSave())
-    {
-        if($this->isNewRecord)
-            $this->created_at=time();
-        return true;
-    }
-    else
-        return false;
 	}
 
 

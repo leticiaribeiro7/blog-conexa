@@ -19,12 +19,15 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
 		'category',
 		'title',
 		'content',
 		'created_at',
-		'author_id',
+		array(
+			'label'=>'Autor',
+			'value'=>$model->author->username
+		),
+		//'author.username'
 	),
 )); ?>
 
