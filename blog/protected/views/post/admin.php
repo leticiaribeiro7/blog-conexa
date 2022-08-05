@@ -5,16 +5,10 @@ $this->breadcrumbs=array(
 ?>
 <h1>Manage Posts</h1>
 
-<?php if (Yii::app()->user->name == "demo") {  //  demo é "admin", pode gerenciar todos os posts
-	$data = $model->search();
-} else {
-	$data = $model->search("author_id");  // se não for admin, so pode gerenciar os posts proprios
-}
-?>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'dataProvider'=>$data,
+	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
 		array(
@@ -26,7 +20,7 @@ $this->breadcrumbs=array(
 		array(
 			'name'=>'created_at',
 			'type'=>'datetime',
-			'filter'=>false,
+			'filter'=>true,
 		),
 		array(
 			'class'=>'CButtonColumn',
