@@ -21,7 +21,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'category'); ?>
-		<?php echo $form->textField($model,'category',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->dropDownList($model,'category', array(
+			'Integrações'=>'Integrações',
+			'Serviços'=>'Serviços',
+			'Financeiro'=>'Financeiro',
+			'Agenda'=>'Agenda',
+			'Parceiros'=>'Parceiros',
+			'Outros'=>'Outros'), array('style' => 'padding: 5px;')); ?>
+
 		<?php echo $form->error($model,'category'); ?>
 	</div>
 
@@ -36,12 +43,6 @@
 		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
 		<?php echo $form->error($model,'content'); ?>
 	</div>
-
-	<!-- <div class="row">
-		<?php //echo $form->labelEx($model,'created_at'); ?>
-		<?php //echo $form->textField($model,'created_at'); ?>
-		<?php //echo $form->error($model,'created_at'); ?>
-	</div> -->
 
 
 	<div class="row buttons">

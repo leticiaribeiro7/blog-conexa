@@ -34,8 +34,8 @@ $this->menu=array(
 
 <div id="comments">
     <?php if($model->commentCount>=1): ?>
-        <h3>
-            <?php echo $model->commentCount . 'comment(s)'; ?>
+        <h3><br><br>
+            <?php echo $model->commentCount . ' comentário(s)'; ?>
         </h3>
  
         <?php $this->renderPartial('_comments',array(
@@ -46,6 +46,7 @@ $this->menu=array(
 
 
 <?php if (!Yii::app()->user->isGuest): ?>
+	<br>
 	<h3>Leave a Comment</h3>
 	
 	<?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
