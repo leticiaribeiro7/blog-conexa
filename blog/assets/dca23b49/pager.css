@@ -45,7 +45,7 @@ ul.yiiPager a:hover
 
 ul.yiiPager .selected a
 {
-	background:rgb(252, 123, 58);
+	background:#b16d2e;
 	color:#FFFFFF;
 	font-weight:bold;
 }

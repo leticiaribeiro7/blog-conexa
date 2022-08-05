@@ -3,7 +3,7 @@ $this->breadcrumbs=array(
 	'Manage Posts',
 );
 ?>
-<h1>Manage Posts</h1>
+<h1>Gerenciar Posts</h1>
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
