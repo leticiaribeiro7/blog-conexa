@@ -137,4 +137,15 @@ class Post extends CActiveRecord
 			'title'=>$this->title,
 		));
 	}
+
+		/**
+	 * @return array a list of links that point to the post list filtered by every tag of this post
+	 */
+	public function getCategoryLinks()
+	{
+		$links=array();
+		foreach(Category::string2array($this->category) as $cat)
+			$links[]=CHtml::link(CHtml::encode($cat), array('post/index', 'category'=>$cat));
+		return $links;
+	}
 }

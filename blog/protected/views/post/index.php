@@ -7,12 +7,16 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Post', 'url'=>array('create')),
-	array('label'=>'Manage Post', 'url'=>array('admin')),
+	array('label'=>'Criar Post', 'url'=>array('create')),
+	array('label'=>'Gerenciar Posts', 'url'=>array('admin')),
 );
+
 ?>
 
-<h1>Posts</h1>
+<?php if(!empty($_GET['category'])): ?>
+<h1>Posts da categoria <i><?php echo CHtml::encode($_GET['category']); ?></i></h1>
+<?php endif; ?>
+
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

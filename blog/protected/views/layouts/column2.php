@@ -18,5 +18,9 @@
 		$this->endWidget();
 	?>
 	</div><!-- sidebar -->
+
+	<div id="categories">
+	<?php $this->widget('CategoryCloud'); ?>
+	</div>
 </div>
 <?php $this->endContent(); ?>

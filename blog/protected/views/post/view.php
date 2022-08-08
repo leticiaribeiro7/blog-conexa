@@ -8,10 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Post', 'url'=>array('index')),
-	array('label'=>'Create Post', 'url'=>array('create')),
-	array('label'=>'Manage Post', 'url'=>array('admin')),
+	array('label'=>'Listar Posts', 'url'=>array('index')),
+	array('label'=>'Criar Post', 'url'=>array('create')),
+	array('label'=>'Gerenciar Post', 'url'=>array('admin')),
 );
+
 ?>
 
 <h1>View Post #<?php echo $model->id; ?></h1>

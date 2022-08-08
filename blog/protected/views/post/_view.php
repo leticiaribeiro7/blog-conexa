@@ -5,7 +5,6 @@
 
 <div class="view">
 
-
 	<div class="post">
 	<div class="title">
 		<?php echo CHtml::link(CHtml::encode($data->title), $data->url, array()); ?>
@@ -23,11 +22,12 @@
 		?>
 	</div>
 	<div class="nav">
-		<b>Category:</b>
-		<?php echo($data->category); ?>
+		<b>Categoria:</b>
+		<?php echo implode(', ', $data->getCategoryLinks()); ?>
 		<br/>
-		<?php echo CHtml::link("Comentários ({$data->commentCount})",$data->getUrl().'#comments'); ?>
+		<?php echo CHtml::link('Permalink', $data->url); ?> |
 	</div>
+	
 </div>
 
 
