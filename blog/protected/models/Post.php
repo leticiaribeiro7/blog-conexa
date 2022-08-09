@@ -85,15 +85,15 @@ class Post extends CActiveRecord
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
-	public function search()
+	public function search($condition = null)
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
 
-		// if ($condition) {
-		// 	$criteria->condition = $condition."=".Yii::app()->user->id; // so mostra para gerenciar os posts do proprio usuario logado
-		// } 
+		if ($condition) {
+			$criteria->condition = $condition."=".Yii::app()->user->id; // so mostra para gerenciar os posts do proprio usuario logado
+		} 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('category',$this->category,true);
 		$criteria->compare('title',$this->title,true);

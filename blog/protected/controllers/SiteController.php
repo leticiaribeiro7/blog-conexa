@@ -106,4 +106,55 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+
+	public function actionRegister() {
+		$model=new RegisterForm;
+
+		$newUser = new User;
+
+		// if it is ajax validation request
+
+		if(isset($_POST['ajax']) && $_POST['ajax']==='register-form')
+
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+
+
+		// collect user input data
+
+		if(isset($_POST['RegisterForm']))
+		{
+
+			$model->attributes=$_POST['RegisterForm'];
+
+			$newUser->username = $model->username;
+
+			$newUser->password = CPasswordHelper::hashPassword($model->password);
+
+			$newUser->email = $model->email;
+
+
+
+
+				if($newUser->save()) {
+
+					$identity=new UserIdentity($newUser->username,$model->password);
+
+					$identity->authenticate();
+
+					Yii::app()->user->login($identity,0);
+
+					//redirect the user to page he/she came from
+
+					$this->redirect(Yii::app()->user->returnUrl);
+			}
+		}
+
+		// display the register form
+
+		$this->render('register',array('model'=>$model));
+	}
 }

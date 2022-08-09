@@ -23,9 +23,9 @@
 	</div>
 	<div class="nav">
 		<b>Categoria:</b>
-		<?php echo implode(', ', $data->getCategoryLinks()); ?>
+		<?php echo ($data->category); ?>
 		<br/>
-		<?php echo CHtml::link('Permalink', $data->url); ?> |
+		<?php echo CHtml::link("Comentários ({$data->commentCount})",$data->url.'#comments'); ?>
 	</div>
 	
 </div>
