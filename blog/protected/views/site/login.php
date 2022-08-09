@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 
 <h1>Login</h1>
 
-<p>Please fill out the following form with your login credentials:</p>
+<p>Preencha com as suas credenciais de login:</p>
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -22,7 +22,7 @@ $this->breadcrumbs=array(
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos com <span class="required">*</span> são obrigatórios.</p>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
@@ -44,6 +44,10 @@ $this->breadcrumbs=array(
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Login', array('class'=>'btn btn-warning')); ?>
+	</div>
+
+	<div class="row">
+	<?php echo 'Não tem uma conta? '. CHtml::link('Registre-se', array('/site/register')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

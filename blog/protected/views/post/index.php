@@ -9,6 +9,8 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Criar Post', 'url'=>array('create')),
 	array('label'=>'Gerenciar Posts', 'url'=>array('admin')),
+	array('label'=>'Gerenciar Comentários', 'url'=>array('/comment/admin'))
+
 );
 
 ?>

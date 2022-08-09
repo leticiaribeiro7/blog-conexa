@@ -15,7 +15,7 @@ $this->menu=array(
 
 ?>
 
-<h1>View Post #<?php echo $model->id; ?></h1>
+<h1>Post #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -48,7 +48,7 @@ $this->menu=array(
 
 <?php if (!Yii::app()->user->isGuest): ?>
 	<br>
-	<h3>Leave a Comment</h3>
+	<h3>Deixe um comentário</h3>
 	
 	<?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
 		<div class="flash-success">

@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'dataProvider'=>$model->search(),
+	'dataProvider'=>$model->search('author_id'),
 	'filter'=>$model,
 	'columns'=>array(
 		array(

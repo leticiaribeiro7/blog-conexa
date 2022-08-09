@@ -64,9 +64,9 @@ class RegisterForm extends CFormModel
 
 	{
 		return array(
-			'username'=>'Username',
+			'username'=>'Nome de usuário',
 			'email'=>'Email',
-			'password'=>'Password',
+			'password'=>'Senha',
 		);
 	}
 
