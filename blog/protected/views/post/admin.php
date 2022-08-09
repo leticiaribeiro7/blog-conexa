@@ -1,6 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Manage Posts',
+	'Gerenciar Posts',
+);
+$this->menu=array(
+	array('label'=>'Listar Posts', 'url'=>array('index')),
+	array('label'=>'Criar Post', 'url'=>array('create')),
+	array('label'=>'Gerenciar Post', 'url'=>array('admin')),
+	array('label'=>'Gerenciar Comentários', 'url'=>array('/comment/admin')),
 );
 ?>
 <h1>Gerenciar Posts</h1>

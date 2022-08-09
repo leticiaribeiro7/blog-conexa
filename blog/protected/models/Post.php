@@ -38,7 +38,7 @@ class Post extends CActiveRecord
 			array('category, title', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('category, title, content', 'safe', 'on'=>'search'),
+			array('title, created_at, content', 'safe', 'on'=>'search'),
 		);
 	}
 

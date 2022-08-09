@@ -109,18 +109,6 @@ class Comment extends CActiveRecord
 		return parent::model($className);
 	}
 
-	protected function beforeSave()
-	{
-		if(parent::beforeSave())
-		{
-			if($this->isNewRecord)
-				$time = time();
-				$this->created_at = date('Y-m-d H:i:s', $time);
-			return true;
-		}
-		else
-			return false;
-	}
 
 	public function getUrl($post=null)
 	{

@@ -97,13 +97,11 @@ class Category extends CActiveRecord
 	}
 
 		/**
-	 * Returns tag names and their corresponding weights.
-	 * Only the tags with the top weights will be returned.
-	 * @param integer the maximum number of tags that should be returned
-	 * @return array weights indexed by tag names.
+	 * Returns categories names.
+	 * @return array category names.
 	 */
-	public function findCategories()
-	{
+	public function findCategories() {
+
 		$models=$this->findAll(array(
 			'order'=>'name',
 		));
@@ -118,7 +116,7 @@ class Category extends CActiveRecord
 		return $categories;
 	}
 
-		public static function string2array($tags)
+	public static function string2array($tags)
 	{
 		return preg_split('/\s*,\s*/',trim($tags),-1,PREG_SPLIT_NO_EMPTY);
 	}

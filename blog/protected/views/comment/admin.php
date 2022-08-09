@@ -6,6 +6,13 @@ $this->breadcrumbs=array(
 	'Gerenciar Comentários',
 );
 
+$this->menu=array(
+	array('label'=>'Listar Posts', 'url'=>array('/post/index')),
+	array('label'=>'Criar Post', 'url'=>array('/post/create')),
+	array('label'=>'Gerenciar Post', 'url'=>array('/post/admin')),
+	array('label'=>'Gerenciar Comentários', 'url'=>array('admin')),
+);
+
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

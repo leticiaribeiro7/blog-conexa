@@ -95,7 +95,7 @@ class CommentController extends Controller
 		{
 			$model->attributes=$_POST['Comment'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('/comment/admin'));
 		}
 
 		$this->render('update',array(

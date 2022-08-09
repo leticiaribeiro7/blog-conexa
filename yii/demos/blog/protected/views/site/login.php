@@ -3,14 +3,6 @@ $this->pageTitle=Yii::app()->name . ' - Login';
 $this->breadcrumbs=array(
 	'Login',
 );
-
-
-$connection= Yii::app()->db;
-$command= $connection->createCommand("SELECT * FROM tbl_user");
-$dataReader = $command->query();
-foreach($dataReader as $row) {
-	echo $row["email"];
-}
 ?>
 
 <h1>Login</h1>
