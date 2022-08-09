@@ -71,7 +71,7 @@
 
 .grid-view table.items tr:hover.selected
 {
-	background: #CCFF66;
+	background: #51d2f6;
 }
 
 .grid-view table.items tbody tr:hover
