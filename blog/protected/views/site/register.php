@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Registro</h1>
+<h1 class='col'>Registro</h1>
 
 
-<div class="form">
+<div class="col form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'register-form',
 	'enableClientValidation'=>true,
@@ -23,27 +23,28 @@ $this->breadcrumbs=array(
 
     <p class="note">Campos com <span class="required">*</span> são obrigatórios.</p>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
-    <div class="row">
+    <div>
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
 
+	<br>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Registrar', array('class'=>'btn btn-warning')); ?>
+		<?php echo CHtml::submitButton('Registrar', array('class'=>'btn')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

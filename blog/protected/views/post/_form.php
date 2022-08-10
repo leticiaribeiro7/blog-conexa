@@ -19,7 +19,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'category'); ?>
 		<?php echo $form->dropDownList($model,'category', array(
 			'Integrações'=>'Integrações',
@@ -32,21 +32,21 @@
 		<?php echo $form->error($model,'category'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'title'); ?>
 		<?php echo $form->textField($model,'title',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'title'); ?>
 	</div>
 
-	<div class="row">
+	<div>
 		<?php echo $form->labelEx($model,'content'); ?>
-		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'content',array('rows'=>6, 'cols'=>61)); ?>
 		<?php echo $form->error($model,'content'); ?>
 	</div>
 
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Criar' : 'Salvar', array('class'=>'btn btn-warning btn-sm')); ?>
+	<div class=" buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Criar' : 'Salvar', array('class'=>'btn')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -21,7 +21,7 @@
 			$this->endWidget();
 		?>
 	</div>
-	<div class="nav">
+	<div class="rounded border border-5 p-2 mb-2 border-opacity-25">
 		<b>Categoria:</b>
 		<?php echo ($data->category); ?>
 		<br/>
