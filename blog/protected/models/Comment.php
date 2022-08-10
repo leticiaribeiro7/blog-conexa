@@ -57,9 +57,9 @@ class Comment extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'content' => 'Content',
-			'created_at' => 'Created At',
-			'author_id' => 'Author',
+			'content' => 'Conteúdo',
+			'created_at' => 'Criado em',
+			'author_id' => 'Autor',
 			'post_id' => 'Post',
 		);
 	}

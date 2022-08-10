@@ -3,18 +3,15 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Comments',
+	'Comentários',
 );
 
-$this->menu=array(
-	array('label'=>'Create Comment', 'url'=>array('create')),
-	array('label'=>'Manage Comment', 'url'=>array('admin')),
-);
 ?>
 
-<h1>Comments</h1>
+<h1>Comentários</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
+	'template'=>"{items}\n{pager}"
 )); ?>
