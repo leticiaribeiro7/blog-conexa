@@ -28,8 +28,8 @@ $this->menu=array(
 			'label'=>'Autor',
 			'value'=>$model->author->username
 		),
-		//'author.username'
 	),
+	'htmlOptions'=>array('class'=>'table table-bordered mb-0')
 )); ?>
 
 

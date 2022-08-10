@@ -37,7 +37,6 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
 	'columns'=>array(
 		'content',
-		'created_at',
 		'post.title',
 		array(
 			'class'=>'CButtonColumn',

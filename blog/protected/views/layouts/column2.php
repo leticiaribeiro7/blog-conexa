@@ -10,17 +10,22 @@
 	<?php
 		$this->beginWidget('zii.widgets.CPortlet', array(
 			'title'=>'Operações',
+			'htmlOptions'=>array('style'=>'margin-left:50px; width: 130%; text-align:center;')
 		));
 		$this->widget('zii.widgets.CMenu', array(
 			'items'=>$this->menu,
-			'htmlOptions'=>array('class'=>'operations'),
 		));
 		$this->endWidget();
 	?>
 	</div><!-- sidebar -->
 
 	<div id="categories">
-	<?php $this->widget('CategoryCloud'); ?>
+	<?php $this->widget('CategoryCloud', array(
+		'htmlOptions'=>array(
+			'style'=>'margin-left:50px;
+			width: 110%;
+			text-align: center')
+	)); ?>
 	</div>
 </div>
 <?php $this->endContent(); ?>
